@@ -3,12 +3,19 @@ package ar.edu.utn.frba.dds.ejercicio_03;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Setter
+@Entity
+//@Table(name="combo")
+@DiscriminatorValue("combo")
 public class Combo extends Producto{
 
   @Getter
+  @OneToMany
+  @JoinColumn(name = "combo_id",referencedColumnName = "id")
   private List<Producto> productos;
 
   public Combo(){
