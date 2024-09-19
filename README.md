@@ -10,3 +10,8 @@
 - El usuario tendrá una relación one-to-many tanto para los `likes` como para los `dislikes`.
 - El dominio, al ser una generalización para diferentes tipos (es decir, un tipo pertenece a un dominio en particular), se modeló con una relación one-to-many.
 - Para los campos variables, se creó una tabla llamada `campo` y se consideró esta relación con dominio como many-to-one porque los campos variables son particulares para cada dominio.
+
+- # Justificación mapeo Enunciado 3: Módulo de Stock
+- Se agregó el atributo `id` en la clase `Producto` para resolver el impedance mismatch de la clave primaria.
+- Como no hay muchos atributos, se elegió mapear las herencias con la estrategia single table.
+- Para la lista de producto de la clase `Combo` se hizo una relación one to many.
